@@ -75,7 +75,7 @@ exports.resetPasswordRequest = async (req, res) => {
     user.resetPasswordToken = token;
     await user.save();
     const resetPageLink =
-      "http://localhost:5175/reset-password?token=" + token + "&email=" + email; //Reset Password Component link
+      "https://ecommerce-deploy-silk.vercel.app/reset-password?token=" + token + "&email=" + email; //Reset Password Component link
     const subject = "reset password for e-commerce";
     const html = `<p>Click <a href='${resetPageLink}'>here</a> to Reset Password</p>`;
     if (email) {

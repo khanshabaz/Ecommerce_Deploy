@@ -19,7 +19,7 @@ exports.createPaymentLink = async (orderId) => {
         email: true,
       },
       reminder_enable: true,
-      callback_url: `http://localhost:5174/order-success/${orderId}`,
+      callback_url: `https://ecommerce-deploy-silk.vercel.app/order-success/${orderId}`,
       callback_method: "get",
     };
 
